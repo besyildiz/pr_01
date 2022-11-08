@@ -1,0 +1,8 @@
+{
+    "githubPullRequests.remotes": [
+        "origin",
+        "upstream",
+        "gh repo clone flutter/gallery",
+        "https://github.com/flutter/gallery"
+    ]
+}
