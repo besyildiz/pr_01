@@ -15,7 +15,6 @@ class _drawerDenememState extends State<drawerDenemem> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       home: Scaffold(
           appBar: AppBar(
             title: Text("Selam"),
@@ -28,7 +27,7 @@ class _drawerDenememState extends State<drawerDenemem> {
             ),
           ),
           drawer: Drawer(
-            child: Column(children: [
+            child: Row(children: [
               Icon(Icons.abc_sharp),
               Icon(Icons.access_time_filled_rounded),
               Icon(Icons.accessibility_new_outlined),
