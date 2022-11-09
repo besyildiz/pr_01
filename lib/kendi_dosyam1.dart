@@ -7,10 +7,6 @@ class calismam1 extends StatefulWidget {
   State<calismam1> createState() => _calismam1State();
 }
 
-void main() {
-  runApp(calismam1());
-}
-
 class _calismam1State extends State<calismam1> {
   @override
   Widget build(BuildContext context) {

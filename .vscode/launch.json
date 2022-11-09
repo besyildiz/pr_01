@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "name": "Flutter (lib\\ders_tab.dart)",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib\\ders_tab.dart"
+        }
+    ]
+}
