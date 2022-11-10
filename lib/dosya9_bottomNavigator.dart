@@ -24,6 +24,8 @@ class _calismam1State extends State<calismam1> {
           appBar: AppBar(
             title: const Text('BottomNavigationBar Demo'),
           ),
+          floatingActionButtonLocation:
+              FloatingActionButtonLocation.centerFloat,
           floatingActionButton: FloatingActionButton(
             onPressed: () {},
             child: Icon(Icons.add),
@@ -44,19 +46,35 @@ class _calismam1State extends State<calismam1> {
               ),
             ],
           ),
-          body: Column(children: [
-            TextField(
-              controller: sayi1,
-              decoration: const InputDecoration(
-                  border: OutlineInputBorder(), labelText: "1. sayıyı giriniz"),
-            ),
-            ElevatedButton(
-                onPressed: () {},
-                child: Text(
-                  "Sayı mı değil mi?",
-                  style: TextStyle(backgroundColor: Colors.amber),
-                )),
-          ]),
+          body: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                Center(
+                  child: Container(
+                    color: Colors.greenAccent,
+                    width: 100,
+                    height: 100,
+                    child: ListView(
+                      children: [
+                        Text(
+                          "Metin 1",
+                          textAlign: TextAlign.center,
+                        ),
+                        Text(
+                          "Metin 2",
+                          textAlign: TextAlign.center,
+                        ),
+                        Text(
+                          "Metin 3",
+                          textAlign: TextAlign.center,
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ])),
         ));
   }
 }
