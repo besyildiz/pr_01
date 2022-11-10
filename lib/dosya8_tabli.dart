@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         appBar: AppBar(
           bottom: TabBar(
@@ -46,6 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               Tab(icon: Icon(Icons.phone_iphone), text: "Tab 2"),
               Tab(icon: Icon(Icons.phone_iphone), text: "Tab 3"),
+              Tab(icon: Icon(Icons.phone_forwarded_sharp), text: "Tab 4"),
             ],
           ),
           title: Text('TutorialKart - TabBar & TabBarView'),
@@ -172,6 +173,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                     child: Text("Sayı kontrolü")),
               ],
+            ),
+            Center(
+              child: Text("Page 1"),
             ),
           ],
         ),
