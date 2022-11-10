@@ -150,7 +150,16 @@ class _MyHomePageState extends State<MyHomePage> {
                       border: OutlineInputBorder(),
                       labelText: "4. sayıyı giriniz"),
                 ),
-                ElevatedButton(onPressed: () {}, child: Text("Sayı kontrolü")),
+                ElevatedButton(
+                    onPressed: () {
+                      String mesaj;
+
+                      if (isNumeric(sayi4.text))
+                        mesajVer("Doğru giriş", true);
+                      else
+                        mesajVer("Yanlış değer", false);
+                    },
+                    child: Text("Sayı kontrolü")),
               ],
             ),
           ],
