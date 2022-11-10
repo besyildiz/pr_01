@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
+TextEditingController sayi5 = TextEditingController();
 TextEditingController sayi4 = TextEditingController();
 TextEditingController sayi3 = TextEditingController();
 TextEditingController sayi2 = TextEditingController();
 TextEditingController sayi1 = TextEditingController();
+
 String tmpVariable = "";
 bool isSwitched = false;
 bool buttonPasif = true;
@@ -150,11 +152,20 @@ class _MyHomePageState extends State<MyHomePage> {
                       border: OutlineInputBorder(),
                       labelText: "4. sayıyı giriniz"),
                 ),
+                SizedBox(
+                  height: 30,
+                ),
+                TextField(
+                  controller: sayi5,
+                  decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: "5. sayıyı giriniz"),
+                ),
                 ElevatedButton(
                     onPressed: () {
                       String mesaj;
 
-                      if (isNumeric(sayi4.text))
+                      if (isNumeric(sayi4.text) && isNumeric(sayi5.text))
                         mesajVer("Doğru giriş", true);
                       else
                         mesajVer("Yanlış değer", false);
