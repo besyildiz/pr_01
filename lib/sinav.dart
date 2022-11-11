@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'sayfaResim.dart';
+import 'ders_tab.dart';
 
 void main() {
   runApp(MyApp());
@@ -56,14 +58,21 @@ class _MyHomePageState extends State<MyHomePage> {
           new IconButton(
               icon: new Icon(Icons.timer),
               onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => MyApp()));
+
                 //        Navigator.pushNamed(context, '/ders11_tabli');
 //Navigator.pushNamed(context, "/ders11_tabli",arguments: firstRouteInfo);
 
                 // Navigator.of(context).pushNamed('/ders11_tabli.dart');
                 //   Navigator.pushNamed(context, 'deneme2.dart');
               }),
-          new IconButton(icon: new Icon(Icons.people), onPressed: () => () {}),
-          new IconButton(icon: new Icon(Icons.map), onPressed: () => () {}),
+          new IconButton(
+              icon: new Icon(Icons.people),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => sayfa44()));
+              }),
         ],
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
