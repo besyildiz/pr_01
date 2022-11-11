@@ -39,6 +39,19 @@ class _MyHomePageState extends State<MyHomePage> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        appBar: AppBar(
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(
+                Icons.add_alarm,
+                color: Colors.white,
+              ),
+              onPressed: () {
+                _islemYap();
+              },
+            )
+          ],
+        ),
         persistentFooterButtons: <Widget>[
           new IconButton(
               icon: new Icon(Icons.timer),
@@ -146,7 +159,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     controller: sayi1,
                     decoration: const InputDecoration(
                         border: OutlineInputBorder(),
-                        labelText: "2. sayıyı giriniz"),
+                        labelText: "1. sayıyı giriniz"),
+                  ),
+                  SizedBox(
+                    height: 30,
                   ),
                   TextField(
                     controller: sayi2,
@@ -154,11 +170,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         border: OutlineInputBorder(),
                         labelText: "2. sayıyı giriniz"),
                   ),
+                  SizedBox(
+                    height: 30,
+                  ),
                   TextField(
                     controller: sayi3,
                     decoration: const InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: "2. sayıyı giriniz"),
+                        border: OutlineInputBorder(), labelText: "Sonuç"),
                   ),
                 ],
               ),
@@ -187,5 +205,9 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: (durum ? Colors.green : Colors.red),
     );
     ScaffoldMessenger.of(context).showSnackBar(snackbar2);
+  }
+
+  void _islemYap() {
+    int a = sayi1.text, b = sayi2.text;
   }
 }
