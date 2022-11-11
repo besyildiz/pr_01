@@ -26,6 +26,7 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
+TextEditingController sayi1 = TextEditingController();
 TextEditingController sayi3 = TextEditingController();
 TextEditingController sayi2 = TextEditingController();
 TextEditingController tcKimlik = TextEditingController();
@@ -139,9 +140,27 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Text("TC Kimlik Kontrol")),
                 ],
               ),
-              Icon(
-                Icons.ballot,
-                size: 400,
+              Column(
+                children: [
+                  TextField(
+                    controller: sayi1,
+                    decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: "2. sayıyı giriniz"),
+                  ),
+                  TextField(
+                    controller: sayi2,
+                    decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: "2. sayıyı giriniz"),
+                  ),
+                  TextField(
+                    controller: sayi3,
+                    decoration: const InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: "2. sayıyı giriniz"),
+                  ),
+                ],
               ),
             ],
           ),
