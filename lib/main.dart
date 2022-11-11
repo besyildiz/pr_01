@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(drawerDenemem());
+  runApp(const drawerDenemem());
 }
 
 class drawerDenemem extends StatefulWidget {
@@ -18,10 +18,10 @@ class _drawerDenememState extends State<drawerDenemem> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           appBar: AppBar(
-            title: Text("Selam"),
+            title: const Text("Selam"),
           ),
           body: Container(
-            child: TextField(
+            child: const TextField(
               enabled: true,
               obscureText: false,
               decoration: InputDecoration(border: OutlineInputBorder()),

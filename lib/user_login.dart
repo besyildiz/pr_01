@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const userLogin());
+void main() => runApp(const Userlogin());
 
-class userLogin extends StatelessWidget {
-  const userLogin({Key? key}) : super(key: key);
+class Userlogin extends StatelessWidget {
+  const Userlogin({Key? key}) : super(key: key);
 
   static const String _title = 'Sample App';
 

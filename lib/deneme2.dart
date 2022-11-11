@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyWidget());
+  runApp(const MyWidget());
 }
 
 class MyWidget extends StatefulWidget {
@@ -22,7 +22,7 @@ class _MyWidgetState extends State<MyWidget> {
             IconButton(onPressed: () {}, icon: const Icon(Icons.favorite)),
             IconButton(onPressed: () {}, icon: const Icon(Icons.edit)),
             IconButton(onPressed: () {}, icon: const Icon(Icons.delete)),
-            Icon(Icons.link)
+            const Icon(Icons.link)
           ],
         ),
         body: Center(
