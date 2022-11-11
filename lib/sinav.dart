@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'sayfaResim.dart';
-import 'ders_tab.dart';
 
 void main() {
   runApp(MyApp());
@@ -58,20 +56,14 @@ class _MyHomePageState extends State<MyHomePage> {
           new IconButton(
               icon: new Icon(Icons.timer),
               onPressed: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => MyApp()));
-
-                //        Navigator.pushNamed(context, '/ders11_tabli');
-//Navigator.pushNamed(context, "/ders11_tabli",arguments: firstRouteInfo);
-
-                // Navigator.of(context).pushNamed('/ders11_tabli.dart');
-                //   Navigator.pushNamed(context, 'deneme2.dart');
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MyWidget()));
               }),
           new IconButton(
               icon: new Icon(Icons.people),
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => sayfa44()));
+                    MaterialPageRoute(builder: (context) => drawerDenemem()));
               }),
         ],
         bottomNavigationBar: BottomNavigationBar(
@@ -227,5 +219,91 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       sayi3.text = c.toString();
     });
+  }
+}
+
+/////////////////
+///
+///
+///
+class MyWidget extends StatefulWidget {
+  const MyWidget({Key? key}) : super(key: key);
+
+  @override
+  State<MyWidget> createState() => _MyWidgetState();
+}
+
+class _MyWidgetState extends State<MyWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          actions: <Widget>[
+            IconButton(onPressed: () {}, icon: const Icon(Icons.favorite)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.edit)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.delete)),
+            Icon(Icons.link)
+          ],
+        ),
+        body: Center(
+          child: Column(
+            children: <Widget>[
+              const SizedBox(
+                height: 120,
+              ),
+              Container(
+                height: 350,
+                width: 200,
+                color: Colors.green,
+                alignment: Alignment.center,
+                child: const Text('Merhaba'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+////////////////
+////
+///
+///
+
+class drawerDenemem extends StatefulWidget {
+  const drawerDenemem({super.key});
+
+  @override
+  State<drawerDenemem> createState() => _drawerDenememState();
+}
+
+class _drawerDenememState extends State<drawerDenemem> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text("Selam"),
+          ),
+          body: Container(
+            child: TextField(
+              enabled: true,
+              obscureText: false,
+              decoration: InputDecoration(border: OutlineInputBorder()),
+            ),
+          ),
+          drawer: Drawer(
+            child: Column(children: [
+              Icon(Icons.abc_sharp),
+              Icon(Icons.access_time_filled_rounded),
+              Icon(Icons.accessibility_new_outlined),
+              Icon(Icons.fire_extinguisher)
+            ]),
+          )),
+    );
   }
 }
