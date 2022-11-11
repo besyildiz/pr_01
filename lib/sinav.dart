@@ -208,6 +208,14 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _islemYap() {
-    int a = sayi1.text, b = sayi2.text;
+    int a = int.parse((sayi1.text)), b = int.parse((sayi2.text)), c = 0;
+
+    if (((a + b) % 10) == 0)
+      c = (a + b) * 10;
+    else
+      c = (a + b) - 10;
+    setState(() {
+      sayi3.text = c.toString();
+    });
   }
 }
