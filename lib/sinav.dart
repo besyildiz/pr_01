@@ -174,6 +174,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 30,
                   ),
                   TextField(
+                    enabled: false,
                     controller: sayi3,
                     decoration: const InputDecoration(
                         border: OutlineInputBorder(), labelText: "Sonuç"),
